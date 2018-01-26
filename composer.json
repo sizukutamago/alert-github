@@ -1,0 +1,27 @@
+{
+  "name": "sizukutamago/alert-github",
+  "description": "毎日slackにgithubのコミット数を通知します",
+  "minimum-stability": "dev",
+  "license": "MIT",
+  "type": "project",
+  "authors": [
+    {
+      "name": "sizukutamago",
+      "email": "sizukutamago@gmail.com"
+    }
+  ],
+  "autoload": {
+    "files": [
+      "app/functions.php"
+    ],
+    "psr-4": {
+      "App\\": "app/"
+    }
+  },
+  "require": {
+    "php": ">=7.1.0",
+    "vlucas/phpdotenv": "^2.4",
+    "nesbot/carbon": "^1.22",
+    "guzzlehttp/guzzle": "^6.3"
+  }
+}
