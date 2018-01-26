@@ -2,9 +2,11 @@
 
 require_once __DIR__ . '/vendor/autoload.php';
 
-//.envから読み込み
-$dotenv = new \Dotenv\Dotenv(__DIR__);
-$dotenv->load();
+if (env('APP_ENV', 'production') !== 'production') {
+    //.envから読み込み
+    $dotenv = new \Dotenv\Dotenv(__DIR__);
+    $dotenv->load();
+}
 
 $time_zone = 'Asia/Tokyo';
 
