@@ -13,7 +13,7 @@ $time_zone = 'Asia/Tokyo';
 //timezoneを日本に
 date_default_timezone_set(env('TIME_ZONE', $time_zone));
 
-$name = env('GITHUB_USER_NAME');
+$name = env('GITHUB_USER_NAME', 'sizukutamago');
 
 $github_api = new \App\GithubAPI(new \GuzzleHttp\Client());
 

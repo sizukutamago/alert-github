@@ -35,7 +35,11 @@ class GithubAPI
     {
         $path = "/users/{$name}/events";
 
-        $response = $this->client->get($this->base_uri . $path);
+        $response = $this->client->get($this->base_uri . $path, [
+            'headers' => [
+                'Time-Zone' => 'Asia/Tokyo'
+            ]
+        ]);
         $body = $response->getBody()->getContents();
         return json_decode($body, true);
     }
